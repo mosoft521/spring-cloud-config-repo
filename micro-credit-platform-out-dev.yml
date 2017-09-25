@@ -1,0 +1,58 @@
+jasypt:
+    encryptor:
+        password: kkd
+server:
+  port: 10345
+spring:
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://10.139.60.143:1433;DatabaseName=kkd_out
+    username: u_panzongwei
+    password: ENC(XHikWtiqp8e21tv3+eFkJ2zieAkNFfeI)
+    max-active: 1000
+    test-while-idle: false
+    test-on-borrow: true
+    validation-query: select 1
+    remove-abandoned: true
+    remove-abandoned-timeout: 300
+    log-abandoned: true
+    initialize: false
+  redis:
+    database: 5
+    host: 10.10.16.18
+    password: vkkd2015 #密码
+    port: 6379
+    pool:
+      max-idle: 8 #最大空闲连接数
+      min_idle: 0 #最小空闲连接数
+      max-active: 8 #最大连接数
+      max-wait: -1 #最大等待时间
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka
+fengniao:
+  creditInfoUrl: http://10.1.12.73:8002/OrgCredit/Query/CreditInfo
+  baseReportInfoUrl: http://10.1.12.73:8002/OrgCredit/Query/ReportInfo
+  pushCreditUrl: http://10.1.12.194:8004/OrgCredit/ProjectTeam/AddCredit
+zhongyuan:
+  creditInfo:
+    publicKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDWdVm0qE7AM2/iBgP1kky29/YQtSwLkZMicteK3t3YOu5N1jJtowpdDZ6RSMVxCJjEQHspAuyCv3/+uDO6quY5EE0Dd+DRVL/m0hNkymIJml2CiiPw3rqb8jYwDkVwEb8tdON4Le9tZgI3Hag2skmEKqVdtemM9YXvli2tx1rw9QIDAQAB
+    baseUrl: http://54.222.145.239:20002/web/InvokeTradeServer
+    uploadAuthorization: #补传征信授权书到渠道
+      diffDate: 1  #相差时间（T-n）
+      zipDir: /cclfileservice/ccl/zyxfjr02/out #pdf授权书压缩包保存路径
+#签章接口:
+compoundSeal:
+  baseUrl: http://10.138.60.95:8089/Api
+# ===================================================================
+# 分布式文件系统FDFS配置
+# ===================================================================
+fdfs:
+  soTimeout: 1501
+  connectTimeout: 601
+  thumbImage:
+    width: 150
+    height: 150
+  trackerList:
+     - 10.139.60.163:22122
