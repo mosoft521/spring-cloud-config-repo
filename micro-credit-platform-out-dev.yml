@@ -2,7 +2,7 @@ jasypt:
     encryptor:
         password: kkd
 server:
-  port: 10345
+  port: 9345
 spring:
   datasource:
     driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
