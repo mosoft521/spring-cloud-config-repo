@@ -30,7 +30,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8080/eureka
+      defaultZone: http://localhost:8761/eureka
 fengniao:
   creditInfoUrl: http://10.1.12.73:8002/OrgCredit/Query/CreditInfo
   baseReportInfoUrl: http://10.1.12.73:8002/OrgCredit/Query/ReportInfo
