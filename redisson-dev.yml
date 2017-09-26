@@ -20,5 +20,5 @@ singleServerConfig:
   dnsMonitoringInterval: 5000
 threads: 0
 nettyThreads: 0
-codec: '!<org.redisson.codec.JsonJacksonCodec> {}'
+codec: !<org.redisson.codec.JsonJacksonCodec> {}
 useLinuxNativeEpoll: false
